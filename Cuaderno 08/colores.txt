@@ -1,0 +1,8 @@
+azul
+rojo
+amarillo
+fuxia
+naranja
+neegro
+blanco
+verde
