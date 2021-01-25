@@ -6,7 +6,7 @@
 
 #define NOMBRE_ARCHIVO "03_alumnos.txt"
 #define FORMATO_ESCRITURA "%s;%s;%d;%.2f\n"     // Formato para escribir registros
-#define FORMATO_LECTURA "%[^;];%[^;];%d;%f%*c"  // Formato para leer registros, descartando \n final
+#define FORMATO_LECTURA "%[^;];%[^;];%d;%f\n"  // Formato para leer registros, descartando \n final
 #define SIZE_STRING 40
 
 typedef struct {
@@ -60,6 +60,30 @@ void leerAlumnos(FILE *file) {
     }
 }
 
+void leerAlumnosBien1(FILE *file) {
+    TAlumno alumno;
+    while (fscanf(file, FORMATO_LECTURA,
+                  alumno.nombre,
+                  alumno.apellidos,
+                  &alumno.curso,
+                  &alumno.nota) == 4) {
+        outputAlumno(&alumno);
+    }
+}
+
+void leerAlumnosBien2(FILE *file) {
+    TAlumno alumno;
+    char buffer[1024];
+    while (fgets(buffer, 1024, file)) {
+        sscanf(buffer, FORMATO_LECTURA,
+               alumno.nombre,
+               alumno.apellidos,
+               &alumno.curso,
+               &alumno.nota);
+        outputAlumno(&alumno);
+    }
+}
+
 /**
  * Función que guarda información de un alumno en un fichero
  * @param alumno: puntero a una estructura de alumno con información
@@ -96,14 +120,13 @@ int menu() {
     return seleccion;
 }
 
-
 int main(int argc, const char *argv[]) {
     FILE *archivo;
     int seleccion = menu();
     if (seleccion == 1) {
         archivo = fopen(NOMBRE_ARCHIVO, "a+");
         if (archivo == NULL) {
-            printf ("No se ha podido abrir el archivo\n");
+            printf("No se ha podido abrir el archivo\n");
             return -1;
         }
         TAlumno alumno = inputAlumno();
@@ -111,7 +134,7 @@ int main(int argc, const char *argv[]) {
     } else if (seleccion == 2) {
         archivo = fopen(NOMBRE_ARCHIVO, "r");
         if (archivo == NULL) {
-            printf ("No se ha podido abrir el archivo\n");
+            printf("No se ha podido abrir el archivo\n");
             return -1;
         }
         leerAlumnos(archivo);

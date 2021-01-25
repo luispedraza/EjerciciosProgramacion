@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define VALOR 1
+#define VALOR 10
 /**
  * Función factorial
  * @param x: número del cual queremos calcular el factorial
