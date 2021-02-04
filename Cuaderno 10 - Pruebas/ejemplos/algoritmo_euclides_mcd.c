@@ -31,15 +31,16 @@ int euclides (int m, int n) {
     return n;
 }
 /**
- * Ejemplo sencillo de prueba de caja negra
- */
-void prueba_caja_negra() {
-
-}
-/**
  * Ejemplo sencillo de prueba de caja blanca
  */
 void prueba_caja_blanca() {
+
+}
+/**
+ * Ejemplo sencillo de prueba de caja negra
+ * Comprobamos el resultado de las funciones
+ */
+void prueba_caja_negra() {
     int entradaA[] = {12, 18, 100, 26};
     int entradaB[] = {18, 12, 26, 100};
     int salida[] = {6, 6, 2, 2};
