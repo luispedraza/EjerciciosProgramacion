@@ -33,8 +33,29 @@ int euclides (int m, int n) {
 /**
  * Ejemplo sencillo de prueba de caja blanca
  */
-void prueba_caja_blanca() {
-
+void prueba_caja_blanca_C1() {
+    printf ("\nPrueba del camino 1\n");
+    assert(euclides(10, 5) == 5);
+    assert(euclides(10, 10) == 10);
+    printf ("\nOK\n");
+}
+/**
+ * Ejemplo sencillo de prueba de caja blanca
+ */
+void prueba_caja_blanca_C2() {
+    printf ("\nPrueba del camino 2\n");
+    assert(euclides(5, 10) == 5);
+    assert(euclides(4, 8) == 4);
+    printf ("\nOK\n");
+}
+/**
+ * Ejemplo sencillo de prueba de caja blanca
+ */
+void prueba_caja_blanca_C3() {
+    printf ("\nPrueba del camino 3\n");
+    assert(euclides(14, 6) == 2);
+    assert(euclides(30, 12) == 6);
+    printf ("\nOK\n");
 }
 /**
  * Ejemplo sencillo de prueba de caja negra
@@ -52,5 +73,8 @@ void prueba_caja_negra() {
 int main() {
     printf ("El MCD de %d y %d es: %d", A, B, euclides(A, B));
     prueba_caja_negra();
-    prueba_caja_blanca();
+    prueba_caja_blanca_C1();
+    prueba_caja_blanca_C2();
+    prueba_caja_blanca_C3();
+
 }
