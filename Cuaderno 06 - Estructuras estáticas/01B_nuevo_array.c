@@ -1,6 +1,6 @@
 /**
  * Implementa un programa que introduzca los valores de un array
- * meduante un bucle que solicita datos por teclado al usuario.
+ * mediante un bucle que solicita datos por teclado al usuario.
  * En este caso, empleando dos funciones.
  */
 #include <stdio.h>
@@ -20,7 +20,7 @@ void leer_vector(int v[], int num) {
     int indice;
     for (indice=0; indice<num; indice++) {
         printf ("Introduzca el valor en la posición %d: ", indice);
-        scanf ("%d&*c", &v[indice]);
+        scanf ("%d%*c", &v[indice]);
     }
 }
 void mostrar_vector(int v[], int num) {
