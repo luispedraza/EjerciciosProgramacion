@@ -2,7 +2,7 @@
  * Programa que lee una matriz de 3x3 y calcula la suma de cada fila
  * y de cada columna dejando estos resultados en dos arrays,
  * uno con la suma de las filas y otro con la de las columnas.
- * Misma solución que en el caso 02A pero haciendo las sumas en un ínco bucle.
+ * Misma solución que en el caso 02A pero haciendo las sumas en un solo bucle.
  */
 #include <stdio.h>
 
@@ -17,7 +17,7 @@ int main() {
     printf("Introduzca la matriz:\n");
     for (i = 0; i < DIM; i++) {
         for (j = 0; j < DIM; j++) {
-            printf("Elemento en la posición (%d, %d): ", i, j);
+            printf("Elemento en la posicion (%d, %d): ", i, j);
             scanf("%d%*c", &matriz[i][j]);
         }
     }

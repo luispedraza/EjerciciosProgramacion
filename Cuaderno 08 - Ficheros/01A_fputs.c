@@ -1,34 +1,23 @@
 /*
- * Programa en C que utiliza fputs() para escribir una cadena en un archivo
- * Mejorado con tres tipos de apertura de archivo: r+, w+, a+
-*/
+ * Programa que utiliza fputs para escribir texto en fichero
+ * Documentación
+ * fopen: http://www.cplusplus.com/reference/cstdio/fopen/
+ * fputs: http://www.cplusplus.com/reference/cstdio/fputs/
+ * fclose: https://www.cplusplus.com/reference/cstdio/fclose/
+ */
 
 #include <stdio.h>
-#define CADENA "Estamos escribiendo esta cadena\n"
 
-int main() {
-    FILE * pf;
-    // Con la opcion "r+":
-    pf = fopen ("01_r+.txt", "r+");
-    if (pf) {
-        fputs (CADENA, pf); // No debería funcionar
-        fclose (pf);
-    }
+#define NOMBRE_FICHERO "fichero.txt"
 
-    // Con la opcion "w+":
-    pf = fopen ("01_w+.txt", "w+");
-    if (pf) {
-        fputs (CADENA, pf); // Se inserta la cadena de texto
-        fclose (pf);
-    }
+int main(int argc, char **argv) {
+    FILE *fp;
+    char cadena[] = "Mostrando el uso de fputs en un Fichero.\n";
 
-    // Con la opcion "a+":
-    pf = fopen ("01_a+.txt", "a+");
-    if (pf) {
-        fputs (CADENA, pf); // Se agreva la cadena de texto al final
-        fclose (pf);
-    }
-
+    // Primero abrimos el fichero
+    fp = fopen(NOMBRE_FICHERO, "w");
+    fputs(cadena, fp);
+    // No debemos olvidar cerrar el fichero abierto
+    fclose(fp);
     return 0;
 }
-

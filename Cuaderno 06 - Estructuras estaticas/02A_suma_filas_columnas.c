@@ -15,7 +15,7 @@ int main() {
     printf ("Introduzca la matriz:\n");
     for (i=0; i<DIM; i++) {
         for (j=0; j<DIM; j++) {
-            printf ("Elemento en la posición (%d, %d): ", i, j);
+            printf ("Elemento (%d, %d): ", i, j);
             scanf ("%d%*c", &matriz[i][j]);
         }
     }

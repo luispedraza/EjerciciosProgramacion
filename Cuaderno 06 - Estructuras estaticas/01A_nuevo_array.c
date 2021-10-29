@@ -10,7 +10,7 @@ int main() {
     int array[NUM_ELEMENTOS];
     int indice;
     for (indice=0; indice<NUM_ELEMENTOS; indice++) {
-        printf ("Introduzca el valor en la posición %d: ", indice);
+        printf ("Introduzca el valor en posicion %d: ", indice);
         scanf ("%d%*c", &array[indice]);
     }
     // Luego, podemos mostrar el vector introducido en pantalla:

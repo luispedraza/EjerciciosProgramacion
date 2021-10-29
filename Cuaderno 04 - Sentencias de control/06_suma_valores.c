@@ -11,10 +11,10 @@
 #define INCREMENTO 2
 
 int main() {
-    int suma = 0, i = 0;
-    for (i = INICIAL; i < 30; i += INCREMENTO) {
-        printf("%d, ", i);
-        if (i%2 == 0) suma += i;
+    int suma = 0, n = 0;
+    for (n = INICIAL; n < 30; n += INCREMENTO) {
+        printf("%d, ", n);
+        if (n%2 == 0) suma += n;
     }
     printf ("\nLa suma solicitada es: %d", suma);
     return 0;

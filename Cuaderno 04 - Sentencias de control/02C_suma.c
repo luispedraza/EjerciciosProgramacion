@@ -11,10 +11,10 @@ int main() {
     printf("Introduzca valores para calcular la suma acumulada.\n");
     printf("Introduzca un 0 para finalizar.\n");
     do {
-        printf("Introduzca un número: ");
+        printf("Introduzca un valor entero: ");
         scanf("%i", &valor);
         acumulado = suma(acumulado, valor);
-        printf("===> La suma acumulada es: %d\n\n", acumulado);
+        printf("===> La suma acumulada es: %d\n", acumulado);
     } while (valor != 0);
     return 0;
 }

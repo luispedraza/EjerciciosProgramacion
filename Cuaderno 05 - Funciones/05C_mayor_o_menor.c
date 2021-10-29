@@ -1,15 +1,15 @@
 /**
- * Implementa un programa que lea dos números enteros e indique el mayor de ellos
+ * Implementa un programa que lea dos valores enteros e indique el mayor de ellos
  * o un mensaje indicando que son iguales. En este caso empleando una función de comparación.
  */
 
 #include <stdio.h>
 
 /**
- * Función que compara dos números
- * @param a Primer número
- * @param b Segundo número
- * @return un 1 si el mayor es el primer, un 2 si el mayor es el segundo, un 0 si son iguales.
+ * Función que compara dos valores enteros
+ * @param a Primer valor
+ * @param b Segundo valor
+ * @return un 1 si el mayor es el primero, un 2 si el mayor es el segundo, un 0 si son iguales.
  */
 int compara(int a, int b);
 
@@ -21,7 +21,7 @@ int main() {
     scanf("%i", &valor2);
     int comp = compara(valor1, valor2);
     if (comp == 0) {
-        printf("Los números son iguales.\n");
+        printf("Los valores son iguales.\n");
     } else {
         printf("El mayor es %d.\n", (comp == 1) ? valor1 : valor2);
     }

@@ -1,6 +1,6 @@
 /**
  * Programa que muestra todos los números comprendidos entre 1 y 100
- * que son múltiplis de 7 o de 13
+ * que son multiplos de 7 o de 13
  */
 
 #include <stdio.h>

@@ -2,6 +2,7 @@
  * Programa que muestra los números enteros comprendidos en un intervalo abierto
  */
 #include <stdio.h>
+
 void mostrarIntervalo(int a, int b);
 
 int main() {
@@ -18,7 +19,7 @@ void mostrarIntervalo(int a, int b) {
     if (a < b) {
         a++;
         while (a<b) {
-            printf ("%d ", a++);
+            printf ("%d, ", a++);
         }
     } else if (a > b) {
         printf ("Error: el segundo valor debe ser mayor que el primero\n");

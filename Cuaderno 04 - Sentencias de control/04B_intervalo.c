@@ -1,7 +1,8 @@
 /**
  * Programa que pide dos números enteros y muestra todos los comprendidos
  * en un intervalo abierto.
- * Esta es una solución mejor y más robusta.
+ * Esta es una solución más complicada que no necesita que
+ * el menor valor sea introducido primero.
  */
 
 #include <stdio.h>
@@ -14,11 +15,11 @@ int main() {
     scanf("%d", &b);
     if (a != b) {
         while ((a += (a < b) ? 1 : -1) != b) {
-            printf("Valor número %d: %d\n", i, a);
+            printf("Valor %d: %d\n", i, a);
             i++;
         }
     } else {
-        printf("Los números son iguales");
+        printf("Los valores son iguales");
     }
     return 0;
 }

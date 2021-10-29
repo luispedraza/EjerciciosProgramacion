@@ -1,16 +1,17 @@
 /**
- * Programa que muestra la tabal de multiplicar de un número entero.
+ * Programa que muestra la tabla de multiplicar de un valor entero.
  */
 
 #include <stdio.h>
 
 int main() {
-    int valor = 0, c = 1;
-    printf("Dame un número entero y te mostraré su tabla de multiplicar: ");
+    int valor = 0, contador = 1;
+    printf("Dame un valor entero y muestro su tabla de multiplicar: ");
     scanf("%d", &valor);
-    while (c <= 10) {
-        printf("%d x %d = %d\n", valor, c, valor * c);
-        c++;
+    while (contador <= 10) {
+        printf("%d x %d = %d\n", valor, contador, valor * contador);
+        // incrementamos aquí el contador
+        contador++;
     }
     return 0;
 }

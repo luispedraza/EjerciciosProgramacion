@@ -6,11 +6,11 @@
 #include <stdio.h>
 
 int main() {
-    int valor = 0, c = 0;
-    printf("Dame un número entero y te mostraré su tabla de multiplicar: ");
+    int valor = 0, contador = 0;
+    printf("Dame un valor entero y te muestro su tabla de multiplicar: ");
     scanf("%d", &valor);
-    while (c++ < 10) {
-        printf("%d x %d = %d\n", valor, c, valor * c);
+    while (contador++ < 10) {
+        printf("%d x %d = %d\n", valor, contador, valor * contador);
     }
     return 0;
 }

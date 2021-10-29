@@ -4,13 +4,17 @@
 
 #include <stdio.h>
 
-int main() {
-    int numero, c = 0;
-    printf("Tabla de multiplicar del número (introduzca un valor): ");
-    scanf("%d", &numero);
-    while (c < 10) {
+void tabla(int valor) {
+    int c = 1;
+    while (c <= 10) {
+        printf("%d x %d = %d\n", valor, c, valor * c);
         c++;
-        printf("%d x %d = %d\n", numero, c, numero * c);
     }
+}
 
+int main() {
+    int numero;
+    printf("Tabla de multiplicar del valor (introduzca un valor):\n");
+    scanf("%d", &numero);
+    tabla(numero);
 }

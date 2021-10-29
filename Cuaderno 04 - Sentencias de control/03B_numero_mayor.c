@@ -13,7 +13,7 @@ int main() {
     printf ("Ingresa el segundo valor: ");
     scanf ("%i", &valor2);
     if (valor1 == valor2) {
-        printf ("Los números son iguales.\n");
+        printf ("Los valores son iguales.\n");
     } else {
         printf ("El mayor es %d.\n", (valor1 > valor2) ? valor1 : valor2);
     }

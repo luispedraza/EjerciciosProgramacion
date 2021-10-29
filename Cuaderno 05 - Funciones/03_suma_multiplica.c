@@ -3,18 +3,19 @@
  */
 #include <stdio.h>
 
+// Cabecera de la funcion menu()
 int menu();
 
 int main(int argc, const char *argv[]) {
     int num1, num2, resultado;
-    printf("Introduce numero 1: \n");
+    printf("Introduce valor 1: \n");
     scanf("%d", &num1);
-    printf("Introduce numero 2: \n");
+    printf("Introduce valor 2: \n");
     scanf("%d", &num2);
     switch (menu()) {
         case 1:
             resultado = num1 * num2;
-            printf("El resultado de la multiplicación es: %d \n", resultado);
+            printf("El resultado de la multiplicacion es: %d \n", resultado);
             break;
         case 2:
             resultado = num1 + num2;
@@ -26,11 +27,15 @@ int main(int argc, const char *argv[]) {
     return 0;
 }
 
+/*
+ * Implementacion de la funcion menu()
+ * Esta función devuelve la opción que decide el usuario
+ */
 int menu() {
     int opcion;
-    printf("Selecciones la opción deseada: \n");
-    printf("1: Multiplicación \n");
-    printf("2: Suma \n");
+    printf("Seleccione la opcion deseada: \n");
+    printf("1: multiplicar \n");
+    printf("2: sumar \n");
     scanf("%d", &opcion);
     return opcion;
 }

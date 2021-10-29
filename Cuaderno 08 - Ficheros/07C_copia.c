@@ -1,31 +1,27 @@
 /*
  * Programa que copia un fichero en otro
- * carácter a carácter
- * Documentación fgetc: https://www.cplusplus.com/reference/cstdio/fgetc/
+ * carácter a carácter.
+ * Este código es incorrecto. Piensa por qué.
  */
 
 #include <stdio.h>
-
 #define ARCHIVO_ORIGEN  "origen.txt"
 #define ARCHIVO_DESTINO "destino.txt"
 
 int main() {
     FILE *ficheroOrigen, *ficheroDestino;
-    int c = 0; // caracter que iremos leyendo
-    ficheroOrigen = fopen(ARCHIVO_ORIGEN, "r"); // modo lectura
+    ficheroOrigen = fopen(ARCHIVO_ORIGEN, "r");
     if (ficheroOrigen == NULL) {
         printf ("No se pudo abrir el fichero de origen: %s\n", ARCHIVO_ORIGEN);
         return -2;
     }
-    ficheroDestino = fopen(ARCHIVO_DESTINO, "w"); // modo escritura
+    ficheroDestino = fopen(ARCHIVO_DESTINO, "w");
     if (ficheroDestino == NULL) {
         printf ("No se pudo abrir el fichero de destino: %s\n", ARCHIVO_DESTINO);
         return -2;
     }
-
-    while ((c = fgetc(ficheroOrigen)) != EOF) {
-        // Copiamos caracteres hasta encontrar EOF
-        fputc(c, ficheroDestino);
+    while (!feof(ficheroOrigen)) {
+        fputc(fgetc(ficheroOrigen), ficheroDestino);
     }
     fclose(ficheroOrigen);
     fclose(ficheroDestino);

@@ -9,7 +9,7 @@ void tabla(int numero, int multiplicador);
 
 int main() {
     int numero;
-    printf("Tabla de multiplicar del número (introduzca un valor): ");
+    printf("Tabla de multiplicar del valor (introduzca un entero):\n");
     scanf("%d", &numero);
     tabla(numero, 1);
 }

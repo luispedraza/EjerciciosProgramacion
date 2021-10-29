@@ -1,6 +1,6 @@
 /*
  * Programa que muestra los números enteros comprendidos en un intervalo abierto
- * (Otra solución que no requiere interoducir los valores en un orden dado)
+ * (Otra solución que no requiere introducir los valores en un orden dado)
  */
 #include <stdio.h>
 
@@ -8,7 +8,7 @@ void mostrarIntervalo(int a, int b);
 
 int main() {
     int a, b;
-    printf("Introduzca dos números enteros separados por un espacio: ");
+    printf("Introduzca dos valores enteros separados por un espacio: ");
     scanf("%d %d", &a, &b);
     mostrarIntervalo(a, b);
 }
@@ -20,5 +20,4 @@ void mostrarIntervalo(int a, int b) {
         printf("Valores del intervalo: ");
         while (a != (a < b ? b - 1 : b + 1)) printf("%d ", (a < b) ? ++a : --a);
     }
-
 }

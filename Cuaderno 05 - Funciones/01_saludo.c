@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 void saludo() {
-    printf ("Hola, te saludo desde este programa escrito en C.\n");
+    printf ("Hola, te saludo desde este programa en C.\n");
 }
 
 int main() {

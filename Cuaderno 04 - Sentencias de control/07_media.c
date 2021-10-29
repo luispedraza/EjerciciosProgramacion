@@ -1,22 +1,26 @@
 /**
- * Programa que solicita continuamente números al usuario hasta que introduce un 0
- * y calcula la media de todos ellos.
+ * Programa que solicita continuamente valores al usuario calculando
+ * su media. El programa finaliza cuando el usuario
+ * introduce un 0.
  */
 
 #include <stdio.h>
 
 int main() {
-    int n = 0;
-    float valor = 0, suma = 0;
+    int valor = 0;  // valor que introduce el usuario
+    int contador = 0;   // contador de valores introducidos
+    float suma = 0, media = 0;
 
     do {
+        // Solicitamos un nuevo valor al usuario
         printf ("Nuevo valor: ");
-        scanf ("%f", &valor);
+        scanf ("%d", &valor);
         if (valor == 0) break;
         suma += valor;
-        n++;
+        contador++;
     } while (1);
     // Imprimimos el resultado con dos decimales:
-    printf("La media de los valores introducidos es: %.2f", suma / n);
+    media = (float)suma / (float)contador;
+    printf("La media de los valores es: %.2f", media);
     return 0;
 }

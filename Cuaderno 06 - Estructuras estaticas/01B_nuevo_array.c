@@ -19,7 +19,7 @@ int main() {
 void leer_vector(int v[], int num) {
     int indice;
     for (indice=0; indice<num; indice++) {
-        printf ("Introduzca el valor en la posición %d: ", indice);
+        printf ("Introduzca el valor en la posicion %d: ", indice);
         scanf ("%d%*c", &v[indice]);
     }
 }

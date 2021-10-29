@@ -12,7 +12,7 @@
 int main() {
     int array_A[N_FILAS][N_COLUMNAS], array_B[N_FILAS][N_COLUMNAS];
     int i, j;
-    srand(time(NULL));  // Inicializa (semilla) el generador de números aleatorios
+    srand(time(NULL));  // Inicializa el generador de números aleatorios
     // Creamos un array aleatorio:
     for (i = 0; i < N_FILAS; i++) {
         for (j = 0; j < N_COLUMNAS; j++) {

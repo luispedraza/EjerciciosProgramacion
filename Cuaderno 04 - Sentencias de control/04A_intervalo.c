@@ -1,5 +1,5 @@
 /**
- * Programa que pide dos números enteros y muestra todos los comprendidos
+ * Programa que pide dos valores enteros y muestra todos los comprendidos
  * en un intervalo abierto.
  */
 
@@ -14,14 +14,14 @@ int main() {
     if (a < b) {
         a++; // se comienza en a+1 y se termina en b‐1
         while (a < b) {
-            printf("valor numero %d = %d\n", i, a);
+            printf("valor %d = %d\n", i, a);
             i++;
             a++;
         }
     } else if (a > b) {
         printf("El mayor debe ser el segundo valor");
     } else {
-        printf("Son iguales");
+        printf("Los dos valores son iguales");
     }
     return 0;
 }
