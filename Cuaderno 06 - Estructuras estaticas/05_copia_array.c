@@ -1,52 +1,38 @@
-/**
- * Programa que copia un array en otro
- */
+#include <stdio.h>
 
-#include <stdio.h>      // Aquí está declarada printf
-#include <stdlib.h>     // Aquí está declarada rand y srand
-#include <time.h>       // Aquí está declarada time
+#define FILAS 3
+#define COLUMNAS 3
 
-#define N_FILAS 3
-#define N_COLUMNAS 5
+void copiar_array(float destino[][COLUMNAS], float origen[][COLUMNAS]);
 
-// Función que genera un array aleatorio
-void generateArray(int array[][N_COLUMNAS]) {
-    int i, j;
-    srand(time(NULL));  // Inicializa (semilla) el generador de números aleatorios
-    // Creamos un array aleatorio:
-    for (i = 0; i < N_FILAS; i++) {
-        for (j = 0; j < N_COLUMNAS; j++) {
-            array[i][j] = rand() % 100;
-        }
-    }
-}
-// Función que copia un array en otro
-void copyArray(int origen[][N_COLUMNAS], int destino[][N_COLUMNAS]) {
-    int i, j;
-    // Copiamos el array A en el array B:
-    for (i = 0; i < N_FILAS; i++) {
-        for (j = 0; j < N_COLUMNAS; j++) {
-            destino[i][j] = origen[i][j];
-        }
-    }
-}
-// Función que muestra un array en pantalla
-void showArray(int array[][N_COLUMNAS]) {
-    int i, j;
-    for (i = 0; i < N_FILAS; i++) {
-        for (j = 0; j < N_COLUMNAS; j++) {
-            printf ("%d\t", array[i][j]);
-        }
-        printf ("\n");
-    }
-}
 int main() {
-    int array_A[N_FILAS][N_COLUMNAS], array_B[N_FILAS][N_COLUMNAS];
-    generateArray(array_A);
-    copyArray(array_A, array_B);
-    printf ("El array original es (array A):\n");
-    showArray(array_A);
-    printf ("El array copiado es (array B):\n");
-    showArray(array_B);
+    float a[FILAS][COLUMNAS], b[FILAS][COLUMNAS];
+    int f = 0, c = 0;   // contadores
+
+    /* Leer datos del array a */
+    for (f = 0; f < FILAS; f++) {
+        for (c = 0; c < COLUMNAS; c++) {
+            printf("a[%d][%d] = ", f, c);
+            scanf(" %f", &a[f][c]);
+        }
+    }
+
+    /* Copiar */
+    copiar_array(b, a);
+
+    /* Mostramos el contenido del array b */
+    for (f = 0; f < FILAS; f++) {
+        for (c = 0; c < COLUMNAS; c++)
+            printf("%10.2f", b[f][c]);
+        printf("\n");
+    }
     return 0;
+}
+
+void copiar_array(float destino[][COLUMNAS], float origen[][COLUMNAS]) {
+    int f, c;
+    for (f = 0; f < FILAS; f++) {
+        for (c = 0; c < COLUMNAS; c++)
+            destino[f][c] = origen[f][c];
+    }
 }
