@@ -1,6 +1,5 @@
 /*
- *
- * Demostración del epleo de fwrite()
+ * Demostración del empleo de fwrite()
  * Referencia: http://www.cplusplus.com/reference/cstdio/fwrite/
  */
 #include <stdio.h>

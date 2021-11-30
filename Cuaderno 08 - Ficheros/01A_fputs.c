@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
     char cadena[] = "Mostrando el uso de fputs en un Fichero.\n";
 
     // Primero abrimos el fichero
-    fp = fopen(NOMBRE_FICHERO, "w");
+    fp = fopen(NOMBRE_FICHERO, "a");
     fputs(cadena, fp);
     // No debemos olvidar cerrar el fichero abierto
     fclose(fp);

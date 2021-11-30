@@ -1,2 +1,0 @@
-Juan;Gomez;3;9.00
-Pedro;Ortiz;

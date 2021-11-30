@@ -10,7 +10,7 @@
 #define DEFAULT_FILE_NAME "02_archivo.txt"
 #define MAX_CHAR 1000
 
-int main (int argc, char **argv) {
+int main () {
     char texto[MAX_CHAR];   // Contiene el texto que introduce el usuario.
     FILE * pf = fopen (DEFAULT_FILE_NAME, "a+");
     int contador_linea = 1;

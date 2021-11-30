@@ -1,4 +1,5 @@
 *.out
 .idea
+PRUEBAS/
 CMakeLists.txt
 cmake-build-debug/
