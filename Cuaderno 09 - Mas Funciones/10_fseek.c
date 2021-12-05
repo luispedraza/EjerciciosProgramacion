@@ -18,7 +18,7 @@ void inputPersona(TPersona *p); // Solicita al usuario datos de una persona
 void outputPersona(TPersona *p);    // Muestra en pantalla información de una persona
 
 int main(int argc, char **argv) {
-    FILE *file; // arachivo que vamos a utilizar
+    FILE *file; // archivo que vamos a utilizar
 
     if (argc < 2) {
         printf("No se han suministrado los suficientes parámetros.\n");

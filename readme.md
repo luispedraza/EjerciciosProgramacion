@@ -6,5 +6,5 @@ Estado actual:
 - Tema 5: completo
 - Tema 6: completo
 - Tema 7: completo
-- Tema 8: en progreso
+- Tema 8: completo
 - Tema 9: en progreso

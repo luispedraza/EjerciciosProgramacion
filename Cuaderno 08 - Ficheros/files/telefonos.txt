@@ -1,0 +1,4 @@
+         Xiaomi	       Redmi Note 9S	 6	    229.90
+        Samsung	          Galaxy A51	 4	    225.90
+         Xiaomi	    Redmi Note 9 Pro	 6	    269.40
+         Xiaomi	           Mi 10T 5G	 6	    499.50

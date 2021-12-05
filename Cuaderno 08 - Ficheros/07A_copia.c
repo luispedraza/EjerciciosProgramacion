@@ -6,8 +6,8 @@
 
 #include <stdio.h>
 
-#define ARCHIVO_ORIGEN  "origen.txt"
-#define ARCHIVO_DESTINO "destino.txt"
+#define ARCHIVO_ORIGEN  "chistes.txt"
+#define ARCHIVO_DESTINO "chistes_copia.txt"
 
 int main() {
     FILE *ficheroOrigen, *ficheroDestino;

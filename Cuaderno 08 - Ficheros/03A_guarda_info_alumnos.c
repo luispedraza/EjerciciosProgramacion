@@ -4,7 +4,7 @@
  */
 #include <stdio.h>
 
-#define NOMBRE_ARCHIVO "03_alumnos.txt"
+#define NOMBRE_ARCHIVO "alumnos.txt"
 #define FORMATO_ESCRITURA "%s;%s;%d;%.2f\n"     // Formato para escribir registros
 #define SIZE_STRING 40
 

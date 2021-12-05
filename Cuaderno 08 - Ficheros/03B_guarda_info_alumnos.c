@@ -1,10 +1,13 @@
 /*
  * Programa que escribe info de alumnos en un fichero
  * formato: texto
+ * Esta solución es igual a la anterior, pero
+ * define funciones específicas.
+ * El código queda mejor estructurado y más legible.
  */
 #include <stdio.h>
 
-#define NOMBRE_ARCHIVO "03_alumnos.txt"
+#define NOMBRE_ARCHIVO "alumnos.txt"
 #define FORMATO_ESCRITURA "%s;%s;%d;%.2f\n"     // Formato para escribir registros
 #define SIZE_STRING 40
 

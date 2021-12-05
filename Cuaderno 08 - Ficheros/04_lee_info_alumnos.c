@@ -4,7 +4,7 @@
  */
 #include <stdio.h>
 
-#define NOMBRE_ARCHIVO "03_alumnos.txt"
+#define NOMBRE_ARCHIVO "alumnos.txt"
 #define FORMATO_LECTURA "%[^;];%[^;];%d;%f\n"  // Formato para leer registros, descartando \n final
 #define SIZE_STRING 40
 
@@ -40,6 +40,7 @@ void leerAlumnosA(FILE *file) {
                &alumno.nota);
         outputAlumno(&alumno);
     }
+
 }
 
 void leerAlumnosB(FILE *file) {
