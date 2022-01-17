@@ -13,13 +13,13 @@
 void serie_decreciente(int x, int n) {
     if (x <= 0) return;
     printf("[%d]: %d, ", n, x);
-    serie_decreciente(x-2, n+1);
+    serie_decreciente(x - 2, n + 1);
 }
 
 int main() {
     int v;
-    printf ("Introduzca un valor positivo entero: ");
-    scanf ("%d", &v);
+    printf("Introduzca un valor positivo entero: ");
+    scanf("%d", &v);
     serie_decreciente(v, 0);
     return 0;
 }

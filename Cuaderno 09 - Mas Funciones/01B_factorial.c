@@ -13,7 +13,7 @@
 int pide_valor() {
     int valor;
     printf ("Introduzca un numero natural: ");
-    scanf ("%d", &valor);
+    scanf (" %d%*c", &valor);
     return valor;
 }
 
@@ -25,7 +25,7 @@ int pide_valor() {
 int fact(int x) {
     if (x == 0) return (1);
     x = x * fact(x-1);  // Llamada recursiva
-    // Para depurar, podríamos ver el valor calulado:
+    // Para depurar, podríamos ver el valor calculado en cada llamada:
     // printf(" %d", x);
     return (x);
 

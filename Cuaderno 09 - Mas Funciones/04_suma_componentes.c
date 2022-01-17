@@ -4,31 +4,31 @@
 */
 
 #include <stdio.h>
-#define NUM_MAX_ELEMENTOS 50
+#include <stdlib.h>
 
 int suma_componentes(int vector[], int tam);
 
-int main(int argc, const char *argv[]) {
-    int vector[NUM_MAX_ELEMENTOS];
+int main() {
+    int *vector;    // El vector de enteros
     int i, tam;
     printf("Introduce el vector:\n");
     printf("Cuantos elementos tiene el vector: \n");
-    scanf("%d", &tam);
+    scanf(" %d%*c", &tam);
+    vector = calloc(tam, sizeof(int));
+
     for (i = 0; i < tam; i++) {
         printf("Introduzca el elemento %d: \n", i);
-        scanf("%d", &vector[i]);
+        scanf(" %d%*c", &vector[i]);
     }
-    printf("La suma de los numeros del vector es: %d \n", suma(vector, tam));
+    printf("La suma de los numeros del vector es: %d \n",
+           suma_componentes(vector, tam));
     return 0;
 }
 
 int suma_componentes(int vector[], int tam) {
-    if (tam == 0) {
-        printf("%d \n", vector[0]);
+    if (tam == 1) {
+        // Caso trivial, con un vector de un único elemento
         return vector[0];
-    } else {
-        printf("%d \n", vector[tam]);
-        return (vector[tam] + suma(vector, tam - 1));
     }
-    return 0;
+    return (vector[tam - 1] + suma_componentes(vector, tam - 1));
 }

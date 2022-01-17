@@ -44,7 +44,8 @@ void sumar_filas_columnas(int array[][DIM], int filas[], int columnas[]) {
  */
 void mostrar_vector(int vector[], int es_fila) {
     for (int i = 0; i < DIM; i++) {
-        printf("%d%c", vector[i], es_fila == 1 ? '\t' : '\n');
+        (es_fila == 1) ? printf("%d%c", vector[i], '\t') : printf("%d%c", vector[i], '\n');
+
         // ten en cuenta cómo se utilizan las comillas simples
         // para introducir el caracter de tabulacion
         // o el de nueva linea

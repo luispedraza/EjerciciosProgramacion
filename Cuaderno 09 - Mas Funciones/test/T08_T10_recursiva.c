@@ -11,5 +11,5 @@ int main(void) {
 
 int recursiva(int a, int b) {
     if (b == 1) return a;
-    else return a + recursiva(a, b-1);
+    else return a + recursiva(a, b - 1);
 }

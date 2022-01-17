@@ -7,4 +7,4 @@ Estado actual:
 - Tema 6: completo
 - Tema 7: completo
 - Tema 8: completo
-- Tema 9: en progreso
+- Tema 9: completo

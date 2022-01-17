@@ -4,6 +4,10 @@
 #define N_PALABRAS 5    // numero de palabras
 #define TAM_PALABRA 20  // tamaño maximo de cada palabra
 
+typedef struct coordenada {
+    float x;
+    float y;
+} TCoordenada;
 
 void pedir_palabras(char p[][TAM_PALABRA], int n_palabras);
 
